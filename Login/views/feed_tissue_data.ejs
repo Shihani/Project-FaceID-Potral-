@@ -1,0 +1,170 @@
+<html lang="en">
+       <%- include header-active %>
+       
+       <div class="btn-toolbar">
+            <span style="padding-right:750px;"></span>
+            <label for="age_group"><b>Age Group</b></label>
+            <select id="gender" name="age_group" >
+              <option value="20-30">20-30</option>
+              <option value="30-40">30-40</option>
+              <option value="40-50">40-50</option>
+            </select>
+            <span style="padding-right:30px;"></span>           
+            <label for="gender"><b>Gender</b></label>
+            <select id="gender" name="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+                
+       </div>
+       <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 8px;
+        }
+        
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        </style>
+       <div class="container">
+        <div class="raw">
+       <div class="column">
+           <br>
+           <br>
+           <br>
+           <br>
+           
+           <img src = "/public/landmarks.png" align="left" height="600" width="500">
+         </div>
+      <div class="column">
+            <div class="container col-sm-12" id="mainform">
+                    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <div class="panel-title"><b>Tissue Data</b></div>
+                                    <!--div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="/">Sign In</a></div-->
+                                </div>
+                                <div class="panel-body" >
+                                    <form class="form-horizontal" role="form" method="post" action="/controllers/feed_tissue_data-controller" onSubmit="return checkblank(this);">
+    
+    
+    
+                                        <div class="form-group">
+                                            <label for="l1" class="col-md-3 control-label"> RExc-LExc</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l1" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l2" class="col-md-3 control-label">REnc-LEnc</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l2" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l3" class="col-md-3 control-label"> RExc-REnc </label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l3" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l4" class="col-md-3 control-label">LExc-LEnc</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l4">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l5" class="col-md-3 control-label"> N-Gn</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l5" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l6" class="col-md-3 control-label">Sn-Gn</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l6" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l7" class="col-md-3 control-label">N-Sn</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l7">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l8" class="col-md-3 control-label">RAc-LAc</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l8">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l9" class="col-md-3 control-label">RAc-Prn</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l9" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l10" class="col-md-3 control-label">LAc-Prn</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l10" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l11" class="col-md-3 control-label">RAIB-LAIB</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l11" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l12" class="col-md-3 control-label">RAIB-Sn</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l12" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l13" class="col-md-3 control-label">LAIB-Sn</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l13" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="l14" class="col-md-3 control-label">N-Prn</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l14" >
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="l15" class="col-md-3 control-label">RCH-LCH</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" name="l15" >
+                                            </div>
+                                        </div>   
+                                        <div class="form-group">
+                                            <!-- Button -->
+                                            <div class="col-md-offset-3 col-md-9">
+                                                <button id="btn-signup" type="submit" class="btn btn-info">Add</button>
+    
+                                            </div>
+                                        </div>
+    
+                                    </form>
+                                </div>
+                            </div>
+                    </div>     
+    
+                </div>
+            </div>
+
+        </div>
+            <%- include footer %>
+    

@@ -1,0 +1,29 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "login authentication",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cryptr": "^4.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "html": "^1.0.0",
+    "jsonwebtoken": "^7.3.0",
+    "mysql": "^2.13.0",
+    "node-crypt": "^1.1.0",
+    "npm-install-peers": "^1.2.1",
+    "redirect": "^0.2.0",
+    "request": "^2.88.0",
+    "res": "^0.4.0",
+    "response": "^0.18.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
