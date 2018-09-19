@@ -6,7 +6,8 @@ var connection = require('./../config');
 module.exports.register=function(req,res){
 
     var users={
-
+        "age_group":"30-40",
+        "gender":"Female",
         "l1":req.body.l1,
         "l2":req.body.l2,
         "l3":req.body.l3,
@@ -33,7 +34,7 @@ module.exports.register=function(req,res){
       }else{
             status:true,
             //data:results,
-            message="user registered sucessfully"
+            //message="user registered sucessfully"
             res.render('feed_tissue_data.ejs',{message: message});
       }
     });

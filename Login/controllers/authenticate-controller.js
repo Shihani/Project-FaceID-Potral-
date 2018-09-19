@@ -3,6 +3,7 @@ cryptr = new Cryptr('myTotalySecretKey');
 
 var connection = require('./../config');
 module.exports.authenticate=function(req,res){
+  var message='';
     var username=req.body.user_name;
     var password=req.body.password;
 
@@ -21,8 +22,8 @@ module.exports.authenticate=function(req,res){
               if(password==decryptedString){
                       status:true,
                       //var message = '';
-                      message="successfully authenticated"
-                      res.render('index.ejs',{message: message});
+                      //message="successfully authenticated"
+                      res.render('admin_login.ejs',{message: message});
 
               }else{
                     status:false,
@@ -34,12 +35,12 @@ module.exports.authenticate=function(req,res){
             if(password==decryptedString){
                     status:true,
                     //var message = '';
-                    message="successfully authenticated"
-                    res.render('feed_tissue_data.ejs',{message: message});
+                    //message="successfully authenticated"
+                    res.render('active_user_login.ejs',{message: message});
 
             }else{
                   status:false,
-                  //var message = '';
+                  //message = '';
                   message="username and password does not match"
                   res.render('login.ejs',{message: message});
             }
@@ -47,8 +48,8 @@ module.exports.authenticate=function(req,res){
           }else{
             if(password==decryptedString){
                     status:true,
-                    message="successfully authenticated"
-                    res.render('visualise_data.ejs',{message: message});
+                    //message="successfully authenticated"
+                    res.render('academic_user_login.ejs',{message: message});
 
             }else{
                   status:false,

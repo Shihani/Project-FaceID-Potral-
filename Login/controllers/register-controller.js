@@ -23,7 +23,7 @@ module.exports.register=function(req,res){
       }else{
             status:true,
             //data:results,
-            message="user registered sucessfully"
+            //message="user registered sucessfully"
             res.render('index.ejs',{message: message});
       }
     });
